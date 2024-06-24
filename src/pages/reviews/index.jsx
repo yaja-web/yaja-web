@@ -3,6 +3,7 @@ import supabase from "@/utils/db";
 import React from "react";
 
 const ReviewsPage = ({reviews}) => {
+  // console.log(reviews);
   return <ReviewsScreen reviews={reviews} />;
 };
 

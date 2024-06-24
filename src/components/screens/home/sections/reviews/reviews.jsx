@@ -71,14 +71,26 @@ const ReviewsSection = ({ reviews }) => {
       {/* <CustomContainer> */}
       <div className={styles.scroller}>
         <div className={styles.scrollHolder}>
-          {reviews.map((d, i) => {
-            return <Review key={`scr_${i}`} data={d} />;
-          })}
+          {reviews
+            .sort(function (a, b) {
+              var c = new Date(a.created_at);
+              var d = new Date(b.created_at);
+              return d - c;
+            })
+            .map((d, i) => {
+              return <Review key={`scr_${i}`} data={d} />;
+            })}
         </div>
         <div className={styles.scrollHolder}>
-          {reviews.map((d, i) => {
-            return <Review key={`scr_${i}`} data={d} />;
-          })}
+          {reviews
+            .sort(function (a, b) {
+              var c = new Date(a.created_at);
+              var d = new Date(b.created_at);
+              return d - c;
+            })
+            .map((d, i) => {
+              return <Review key={`scr_${i}`} data={d} />;
+            })}
         </div>
       </div>
       <CustomContainer>

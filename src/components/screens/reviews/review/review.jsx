@@ -87,6 +87,7 @@ const Review = ({ review, setReviews, index }) => {
           )}
         </>
       )}
+      <small className={styles.data}>{new Date(review.created_at).toLocaleString()}</small>
     </div>
   );
 };

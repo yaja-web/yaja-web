@@ -179,13 +179,19 @@ const ReviewsScreen = ({ reviews: data }) => {
         <ReviewForm setReviews={setReviews} />
         <br />
         <Row>
-          {reviews.map((review, idx) => {
-            return (
-              <Col key={`${review.id}`} xs={12} lg={6}>
-                <Review review={review} setReviews={setReviews} index={idx} />
-              </Col>
-            );
-          })}
+          {reviews
+            .sort(function (a, b) {
+              var c = new Date(a.created_at);
+              var d = new Date(b.created_at);
+              return d - c;
+            })
+            .map((review, idx) => {
+              return (
+                <Col key={`${review.id}`} xs={12} lg={6}>
+                  <Review review={review} setReviews={setReviews} index={idx} />
+                </Col>
+              );
+            })}
         </Row>
       </CustomContainer>
     </main>

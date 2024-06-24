@@ -12,6 +12,8 @@ export default Home;
 export async function getStaticProps() {
   const res = await supabase.from("reviews").select().limit(10);
 
+  console.log(res);
+
   return {
     props: { reviews: res?.data || [] },
   };

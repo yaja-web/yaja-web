@@ -8,7 +8,7 @@ const ReviewsPage = ({reviews}) => {
 
 export default ReviewsPage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // Call the fetch method and passing
   // the pokeAPI link
   const res = await supabase.from("reviews").select();

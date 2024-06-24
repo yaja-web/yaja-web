@@ -1,0 +1,47 @@
+.ReviewsScreen {
+  padding: 70px 0;
+
+  max-width: 100vw;
+  overflow: hidden;
+  .ReviewForm {
+    background-color: $color_o3;
+    width: 600px;
+    margin: auto;
+    border-radius: 5px;
+    // height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+    // @include flexCenter;
+    // flex-direction: column;
+
+    .stars {
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      //   margin: 20px 0;
+      font-size: 20px;
+
+      .star {
+        color: gray;
+        cursor: pointer;
+
+        &.active {
+          color: $color_o4;
+        }
+        // &:hover {
+        //   color: $color_o4;
+        // }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .ReviewForm {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.productsSection {
+  background-image: linear-gradient($color_o2, $color_o2, $color_p4);
+  padding-bottom: 30px;
+  .left {
+    position: relative;
+    @include flexCenter;
+
+    .image {
+      position: relative;
+
+      > img {
+        //   width: 90%;
+        height: 100%;
+        @include respond-below(md) {
+          height: auto;
+          width: 90%;
+        }
+      }
+
+      .mascot {
+        position: absolute;
+        // left: 0;
+        height: 300px;
+        width: auto;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      background-color: white;
+      font-size: 40px;
+      padding: 10px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translate(0, -50%);
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 1px 1px 1px 1px rgb(196, 196, 196);
+
+      &:hover {
+        font-size: 45px;
+      }
+
+      &.leftArrow {
+        left: 50px;
+      }
+
+      &.rightArrow {
+        right: 50px;
+        // display: none;
+      }
+
+      @include respond-below(md) {
+        &.leftArrow {
+          left: 0px;
+        }
+
+        &.rightArrow {
+          right: 0px;
+          // display: none;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .desc {
+      h1 {
+        font-weight: 600;
+        font-size: 34px;
+        margin: 0;
+      }
+
+      hr {
+        margin: 0;
+        height: 6px;
+        width: 150px;
+        opacity: 1;
+        border: none;
+        margin: 10px 0 20px 0;
+      }
+    }
+
+    .allProducts {
+      .wrap {
+        display: flex;
+        gap: 40px;
+
+        .small {
+          cursor: pointer;
+          &:hover,
+          &.active {
+            transform: scale(1.2);
+            -webkit-filter: drop-shadow(1px 1px 0 white)
+              drop-shadow(-1px -1px 0 white);
+            filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white);
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .left {
+      margin-bottom: 40px;
+    }
+
+    .right {
+      text-align: center;
+
+      .desc{
+        hr{
+          margin:10px auto 20px auto;
+        }
+      }
+
+      .allProducts {
+        margin-top: 40px;
+
+        .wrap {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

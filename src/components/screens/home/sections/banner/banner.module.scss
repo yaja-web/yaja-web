@@ -1,0 +1,192 @@
+.BannerSection {
+  .bg {
+    height: 100vh;
+    // background: -webkit-linear-gradient(90deg, $color_o3 33%, #E6FFFD 33%);
+    // background: -webkit-linear-gradient(90deg, $color_o3 33%, $color_o1 33%);
+    background-image: url('/bg1.svg');
+    background-size: contain;
+    overflow: hidden;
+    // background-position: bottom;
+    
+    @include respond-below(xxl) {
+      background-position: -60px;
+      // background: -webkit-linear-gradient(90deg, $color_o3 20%, #E6FFFD 20%);
+      background-size: cover;
+    }
+
+    .wrap {
+      position: relative;
+      // background-color: rgba(246, 108, 108, 0.537);
+      height: 100vh;
+      width: 100%;
+
+      .tree_right {
+        position: absolute;
+        right: -130px;
+        height: 80%;
+        // top: 100px;
+        bottom: 50px;
+      }
+
+      .bottle_right {
+        position: absolute;
+        bottom: -10px;
+        height: 50%;
+        right: 150px;
+      }
+
+      .tree_left {
+        position: absolute;
+        left: -100px;
+        bottom: 50px;
+        height: 80%;
+      }
+
+      .masc_left {
+        position: absolute;
+        bottom: 10px;
+        height: 55%;
+        left: 150px;
+      }
+      @include respond-below(xxl) {
+        // display: none;
+
+        .tree_left {
+          left: -150px;
+        }
+        .masc_left {
+          left: 0px;
+        }
+      }
+      @include respond-below(xl) {
+        // display: none;
+
+        .tree_right {
+          right: -100px;
+          height: 70%;
+          bottom: 40px;
+        }
+
+        .bottle_right {
+          height: 40%;
+          right: 100px;
+        }
+
+        .tree_left {
+          left: -100px;
+          height: 70%;
+          bottom: 40px;
+        }
+        .masc_left {
+          left: 10px;
+          height: 50%;
+          bottom: 0;
+        }
+      }
+
+      @include respond-below(lg) {
+        .tree_right {
+          right: -140px;
+          height: 60%;
+        }
+
+        .bottle_right {
+          height: 35%;
+          right: 50px;
+          bottom: 5px;
+        }
+
+        .tree_left {
+          height: 60%;
+        }
+
+        .masc_left {
+          height: 40%;
+          bottom: 10px;
+        }
+        // display: initial;
+        // background-color: red;
+      }
+      @include respond-below(md) {
+        .tree_right {
+          height: 50%;
+          right: -100px;
+        }
+
+        .tree_left {
+          height: 50%;
+          // left: -120px;
+        }
+
+        .masc_left {
+          bottom: 10px;
+          left: 0;
+        }
+        // display: initial;
+        // display: none;
+        // background-color: red;
+      }
+      @include respond-below(sm) {
+        .tree_right {
+          height: 40%;
+        }
+
+        .tree_left {
+          height: 40%;
+          left: -50px;
+        }
+
+        .masc_left {
+          height: 40%;
+          left: -50px;
+        }
+
+        .bottle_right {
+          height: 30%;
+          right: -50px;
+
+        }
+      }
+
+      .content{
+        position: relative;
+        z-index: 100;
+        padding-top: 110px;
+        text-align: center;
+        width: 70%;
+        margin: auto;
+        // @include flexCenter;
+        // background-color: red;
+        // height: 100%;
+
+
+        h1{
+          font-size: 80px;
+          // color: $color_o4;
+          color: $color_p1;
+        }
+
+
+        @include respond-below(md){
+          // background-color: red;
+
+          h1{
+            font-size: 60px;
+          }
+        }
+        @include respond-below(sm){
+          // background-color: red;
+          width: 100%;
+          padding-top: 150px;
+
+          h1{
+            font-size: 60px;
+          }
+        }
+      }
+    }
+
+    
+   
+  }
+}

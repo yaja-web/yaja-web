@@ -1,0 +1,112 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    height: 90px;
+
+    .gbtn {
+      height: 40px;
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+    @include respond-below(md) {
+      height: 80px;
+      .logo {
+        height: 50px;
+      }
+
+      .gbtn {
+        display: none;
+      }
+    }
+
+    nav {
+      button {
+        height: 50px;
+      }
+
+      display: flex;
+      align-items: center;
+      ul {
+        margin: 0;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        li {
+          margin: 0 25px;
+          a {
+            color: black;
+          }
+
+          &:hover {
+            a {
+              color: $color_o4;
+            }
+            transform: scale(1.1);
+          }
+
+          &.active {
+            border-bottom: 2px solid $color_o5;
+            a {
+              color: $color_o5;
+            }
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .btn {
+      width: 35px;
+      height: 35px;
+      color: $color_o5;
+      cursor: pointer;
+      &:hover {
+        color: $color_o5;
+        transform: scale(1.2);
+      }
+      display: none;
+    }
+
+    @include respond-below(md) {
+      nav {
+        display: none;
+      }
+
+      img {
+        height: 40px;
+      }
+
+      .btn {
+        display: unset;
+      }
+    }
+  }
+
+  background-color: rgba(243, 204, 13, 0.2);
+  backdrop-filter: blur(10px);
+  &.scrolled {
+    background-color: transparent;
+    backdrop-filter: none;
+
+    nav{
+      display: none;
+    }
+
+    .btn {
+      display: unset;
+    }
+  }
+}

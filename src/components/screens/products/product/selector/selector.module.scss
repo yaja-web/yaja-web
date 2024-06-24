@@ -1,0 +1,45 @@
+.Selector {
+  position: absolute;
+  //   background-color: red;
+  height: 400px;
+  width: 100px;
+  right: 0;
+  top: 25vh;
+  z-index: 100;
+
+  .prod {
+    img {
+      width: 100px;
+      transform: rotate(-90deg) translate(0, 50px);
+      margin: -18px;
+      cursor: pointer;
+
+      &:hover {
+        transform: rotate(-90deg) translate(0, 40px);
+      }
+
+      &.active {
+        transform: rotate(-90deg) translate(0, 20px);
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    // display: none;
+    .prod {
+      img {
+        width: 65px;
+        transform: rotate(-90deg) translate(0, 65px);
+        margin: -10px;
+
+        &:hover {
+          transform: rotate(-90deg) translate(0, 50px);
+        }
+
+        &.active {
+          transform: rotate(-90deg) translate(0, 40px);
+        }
+      }
+    }
+  }
+}

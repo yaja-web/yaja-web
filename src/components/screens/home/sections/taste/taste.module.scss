@@ -1,0 +1,45 @@
+.TasteSection {
+  //   height: 100vh;
+  padding-bottom: 50px;
+  background-image: url("/bg2.svg");
+  background-color: #E6FFFD;
+  background-position: center;
+  background-size: cover;
+
+  .text {
+    width: 650px;
+    text-align: center;
+    margin: auto;
+    h3 {
+      font-size: 40px;
+      font-weight: 600;
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-around;
+
+    @include respond-below(md) {
+      width: 70%;
+      margin: auto;
+      .card {
+        // background-color: red;
+        margin: auto;
+        width: fit-content;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .text {
+      width: fit-content;
+
+      h3 {
+        font-size: 30px;
+      }
+    }
+  }
+}

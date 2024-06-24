@@ -1,0 +1,47 @@
+.Review {
+  padding: 20px;
+  background-color: $color_o3;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  .top {
+    display: flex;
+    gap: 16px;
+    .name {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $color_o4;
+      @include flexCenter;
+      font-size: 30px;
+      span {
+        color: white;
+      }
+    }
+
+    width: 100%;
+
+    .n {
+      display: flex;
+      align-items: center;
+
+      width: fit-content;
+      justify-content: space-between;
+    }
+
+    .del {
+      margin-left: 20px;
+      cursor: pointer;
+      color: red;
+    }
+
+    .star {
+      color: rgb(171, 171, 171);
+      margin-right: 4px;
+
+      &.active {
+        color: $color_o4 !important;
+      }
+    }
+  }
+}
